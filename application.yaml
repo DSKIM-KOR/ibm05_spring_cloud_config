@@ -9,6 +9,11 @@ server:
   # eureka에 등록할 때 할당된 임의 port를 알려주면 apigate가 ureka에게 물어보므로 개발자가 port를 관리할 필요가 없다
   port: 0
 spring:
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
   redis:
     host: localhost
     port: 6379
@@ -23,3 +28,6 @@ spring:
     hibernate:
       ddl-auto: create
     show_sql: true
+  cloud:
+    bus:
+      enabled: true
